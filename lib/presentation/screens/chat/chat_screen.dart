@@ -23,23 +23,24 @@ class ChatScreen extends StatelessWidget {
 }
 
 class _ChatView extends StatelessWidget {
- 
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-            Expanded(child:
-             ListView.builder(
-              itemCount: 100,
-              itemBuilder: (context, index) {
-              
-              return const MyMessageBubble();
-            },
-            )
-            )
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+              Expanded(child:
+               ListView.builder(
+                itemCount: 100,
+                itemBuilder: (context, index) {
+                
+                return const MyMessageBubble();
+              },
+              )
+              )
+          ],
+        ),
       ),
     );
   }
