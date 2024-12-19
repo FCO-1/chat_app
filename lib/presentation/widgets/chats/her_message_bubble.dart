@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-class MyMessageBubble extends StatelessWidget {
-  const MyMessageBubble({super.key});
+class HerMessageBubble extends StatelessWidget {
+  const HerMessageBubble({super.key});
 
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           decoration:  BoxDecoration(
-            color: colors.primary,
+            color: colors.secondary,
             borderRadius: BorderRadius.circular(20),
           ),
           child: const Padding(padding:  EdgeInsets.all(10),
-          child: Text("Lorem ipsum dolor sit amet, mollit anim id est laborum "),
+          child: Text("Hola 2"),
           ),
         ),
-        const SizedBox(height: 10,)
+        const SizedBox(height: 5)
       ],
     );
   }
