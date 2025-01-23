@@ -44,11 +44,13 @@ class _ChatView extends StatelessWidget {
                   final message = chatProviderState.messageList[index];
                   return (message.fromWho == FromWho.hers)
                   ? HerMessageBubble()
-                  : MyMessageBubble();
+                  : MyMessageBubble(message: message);
               },
               )
               ),
-              const MessageFieldBox(),
+               MessageFieldBox(
+                onValue: (value) => chatProviderState.sendMessage(value),
+              ),
           ],
         ),
       ),
